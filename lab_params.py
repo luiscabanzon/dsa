@@ -7,7 +7,7 @@ DB_HOST='localhost'
 DB_NAME='postgres'
 DB_USER='postgres'
 DB_PASSWORD='postgres'
-DB_PORT=5433 # Default is 5432
+DB_PORT=5432 # Default is 5432, if some service was using that port already then PostgreSQL's port may be 5433 instead
 
 # File paths
 RAW_DATA_FOLDER_PATH = os.path.join('data', 'raw')
