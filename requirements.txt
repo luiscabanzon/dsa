@@ -1,0 +1,5 @@
+jupyterlab
+luigi
+pandas
+SQLAlchemy
+psycopg2-binary

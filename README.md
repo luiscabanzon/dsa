@@ -22,6 +22,8 @@ We need the following libraries:
 - [SQL Alchemy](https://docs.sqlalchemy.org/en/14/intro.html): Library used as an interface to interact from Python with different databases.
 - [Psycopg](https://www.psycopg.org/docs/install.html): This module serves as a connector to PostgreSQL.
 
+If you have pip installed, you can download these libraries using the requirements file in this repository as follows:
+> pip install -r requirements.txt
 
 ## 2. Learn SQL
 In this lab we use some basic **SQL** (Structured Query Language). This is the main tool to interact with the vast majority of databases. Each SQL has its own "dialect", but there is a common core to all of them.
