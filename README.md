@@ -1,7 +1,7 @@
 # Data Engineering Lab
 ---
 
-## 1. Setup up
+## 1. Setup
 ---
 To go through this lab you will need to install the following tools in your workstation.
 
@@ -35,7 +35,7 @@ If you are not familiar with SQL already have no worries, it's by far the easies
 - [CodeCademy](https://www.codecademy.com/courses/learn-sql/)
 
 
-## 2. Repository content
+## 3. Repository content
 ---
 Files you will find in this repository:
 - Data Engineering Lab.ipynb: A Jupyter notebook with some examples of data manipulation that serves as an initial setup.
@@ -45,3 +45,4 @@ Files you will find in this repository:
     - rpl_covid_survey.py : Downloads daily reports from API.
     - covid_survey_covid_mask.py : Joins 2 reports from different indicators (covid & mask) into a single table.
     - covid_survey_covid_mask_2.py: Similar to the previous pipeline, but using a table schema that is more escalable.
+    - covid_survey_json.py: Yet another iteration on covid_survey_covid_mask, but now making it fully escalable to handle a dinamic list of rpl_covid_XXX reports as input.
