@@ -29,4 +29,5 @@ SURVEY_INDICATORS = [
     'covid',
     'tested_positive_14d',
     'anosmia',
+    'covid_vaccine',
 ]

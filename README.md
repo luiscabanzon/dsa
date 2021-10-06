@@ -46,3 +46,10 @@ Files you will find in this repository:
     - covid_survey_covid_mask.py : Joins 2 reports from different indicators (covid & mask) into a single table.
     - covid_survey_covid_mask_2.py: Similar to the previous pipeline, but using a table schema that is more escalable.
     - covid_survey_json.py: Yet another iteration on covid_survey_covid_mask, but now making it fully escalable to handle a dinamic list of rpl_covid_XXX reports as input.
+
+
+# 4. Useful links
+- [Facebook Data For Good](https://dataforgood.facebook.com/)
+- [The Global COVID-19 Trends and Impact Survey Open Data API](https://gisumd.github.io/COVID-19-API-Documentation/)
+- [Movement Range Maps](https://dataforgood.facebook.com/dfg/tools/movement-range-maps)
+- [High Resolution Population Density Maps](https://dataforgood.facebook.com/dfg/tools/high-resolution-population-density-maps)
