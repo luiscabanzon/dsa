@@ -1,23 +1,18 @@
 #!/usr/bin/env python
 
 import pandas as pd
-import psycopg2 as pg
 import luigi
+import sqlite3
 
 from lab_params import *
 
 
 # Returns objects to interact with database
 def connect_db():
-    conn = pg.connect(
-        host=DB_HOST,
-        dbname=DB_NAME,
-        user=DB_USER,
-        password=DB_PASSWORD,
-        port=DB_PORT,
-    )
+    conn = sqlite3.connect(DB_NAME)
     cur = conn.cursor()
     return conn, cur
+
 
 # Creates empty table in database
 def create_table(table_name, table_schema, drop_if_exists=False):
@@ -89,19 +84,19 @@ def run_query(query):
     conn.commit()
     conn.close()
 
+
 # Returns a dataframe listing all tables in database
 def get_tables_list():
-    return query_db('''
-        SELECT table_name
-        FROM information_schema.tables
-        WHERE table_schema='public'
-        AND table_type='BASE TABLE'
-        ORDER BY table_name;
-    ''')
+    return query_db("SELECT name FROM sqlite_master WHERE type='table'")
+
+
+# Returns True if table exists, False otherwise
+def table_exists(table_name):
+    return table_name in set(get_tables_list()["name"])
 
 
 # ##########################
-# Luigi auxiliary utillities
+# Luigi auxiliary utilities
 # ##########################
 
 class TableExists(luigi.Target):
@@ -110,13 +105,8 @@ class TableExists(luigi.Target):
         self.table_name = table_name
 
     def exists(self):
-            return query_db(f'''
-                SELECT table_name
-                FROM information_schema.tables
-                WHERE table_schema='public'
-                AND table_type='BASE TABLE'
-                AND table_name='{self.table_name}';
-            ''').size > 0
+        return table_exists()
+
 
 class DataExists(luigi.Target):
     def __init__(self, table_name, where_clause):
