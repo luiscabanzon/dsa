@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from dsa.lab_utils import *
+from lab_utils import *
 
 import luigi
 import requests
@@ -106,7 +106,7 @@ class MasterTask(luigi.WrapperTask):
     date = luigi.Parameter()
 
     def requires(self):
-        for indicator in ['mask', 'finance']:
+        for indicator in ['mask', 'covid']:
             for country in ['Germany', 'Japan']:
                 yield LoadReportIntoDB(indicator=indicator, country=country, date=self.date, test_prefix=self.test_prefix)
 

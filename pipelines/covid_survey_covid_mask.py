@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from dsa.lab_utils import *
+from lab_utils import *
 
 import luigi
 import requests

@@ -77,9 +77,12 @@ def query_db(query):
     conn.close()
     return output
 
+
 # Runs query, returns nothing
-def run_query(query):
+def run_query(query, verbose=False):
     conn, cur = connect_db()
+    if verbose:
+        print(query)
     cur.execute(query)
     conn.commit()
     conn.close()
@@ -105,7 +108,7 @@ class TableExists(luigi.Target):
         self.table_name = table_name
 
     def exists(self):
-        return table_exists()
+        return table_exists(self.table_name)
 
 
 class DataExists(luigi.Target):
@@ -118,6 +121,19 @@ class DataExists(luigi.Target):
         if TableExists(self.table_name).exists():
             print(f'LOGGING: Table exists: {self.table_name}')
             return query_db(f'SELECT * FROM {self.table_name} WHERE {self.where_clause} LIMIT 1').size > 0
+        else:
+            return False
+
+
+class DummyOutput(luigi.Target):
+    def __init__(self, dummy_variable=False):
+        super().__init__()
+        self.dummy_variable = dummy_variable
+
+    def exits(self):
+        print(f'DummyOutput: {self.dummy_variable}')
+        if self.dummy_variable:
+            return True
         else:
             return False
 
