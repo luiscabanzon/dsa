@@ -65,13 +65,13 @@ class LoadTable(luigi.Task):
         run_query(Template("""
             INSERT INTO {{table_name}}
             SELECT 
-                    '{"covid:" ' || percent_cli || ', ' || '"mask": ' || percent_mc || '}'
+                    '{"covid:" ' || pct_covid || ', ' || '"mask": ' || percent_mc || '}'
                 AS percent_json,
-                    '{"covid": ' || cli_se || ', ' || '"mask": ' || mc_se || '}'
+                    '{"covid": ' || covid_se || ', ' || '"mask": ' || mc_se || '}'
                 AS json_se,
-                    '{"covid": ' || percent_cli_unw || ', ' || '"mask": ' || percent_mc_unw || '}'
+                    '{"covid": ' || pct_covid_unw || ', ' || '"mask": ' || percent_mc_unw || '}'
                 AS percent_json_unw,
-                    '{"covid": ' || cli_se_unw || ', ' || '"mask": ' || mc_se_unw || '}'
+                    '{"covid": ' || covid_se_unw || ', ' || '"mask": ' || mc_se_unw || '}'
                 AS json_se_unw,
                     '{"covid": ' || a.sample_size || ', ' || '"mask": ' || b.sample_size || '}'
                 AS json_sample_size,
@@ -80,7 +80,7 @@ class LoadTable(luigi.Task):
                 a.gid_0,
                 a.survey_date
             FROM rpl_covid_survey_covid a
-            INNER JOIN rpl_covid_survey_mask b
+            LEFT JOIN rpl_covid_survey_mask b
             ON a.survey_date = b.survey_date
             AND a.iso_code = b.iso_code
             WHERE

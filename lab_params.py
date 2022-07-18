@@ -10,7 +10,7 @@ DB_PASSWORD='postgres'
 DB_PORT=5432 # Default is 5432, if some service was using that port already then PostgreSQL's port may be 5433 instead
 
 # File paths
-RAW_DATA_FOLDER_PATH = os.path.join('data', 'raw')
+RAW_DATA_FOLDER_PATH = 'raw_data'
 MOVE_RANGE_FILE_PATH = os.path.join(RAW_DATA_FOLDER_PATH ,'movement-range-2021-09-09.txt')
 COUNTRY_REGION_FILE_PATH = os.path.join(MOVE_RANGE_FILE_PATH , 'country_regions.txt')
 

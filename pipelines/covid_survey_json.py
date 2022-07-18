@@ -78,9 +78,9 @@ class LoadTable(luigi.Task):
         WITH_STATEMENT = ',\n'.join(['{i} AS (SELECT * FROM rpl_covid_survey_{i} WHERE survey_date={data_date})'.format(i=i, data_date=data_date) for i in INDICATORS])
 
         # String manipulation to concatenate different indicators withing a JSON-formatted string
-        percent_json = ' || '.join([""" '"{i}": ' || COALESCE(CAST(percent_{code} AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
+        percent_json = ' || '.join([""" '"{i}": ' || COALESCE(CAST({percent}_{code} AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i), percent = 'pct' if i == 'covid' else 'percent') for i in INDICATORS])
         json_se = ' || '.join([""" '"{i}": ' || COALESCE(CAST({code}_se AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
-        percent_json_unw = ' || '.join([""" '"{i}": ' || COALESCE(CAST(percent_{code}_unw AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
+        percent_json_unw = ' || '.join([""" '"{i}": ' || COALESCE(CAST({percent}_{code}_unw AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i), percent = 'pct' if i == 'covid' else 'percent') for i in INDICATORS])
         json_se_unw = ' || '.join([""" '"{i}": ' || COALESCE(CAST({code}_se_unw AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
         json_sample_size = ' || '.join([""" '"{i}": ' || COALESCE(CAST({i}.sample_size AS TEXT), 'null') """.format(i=i) for i in INDICATORS])
 

@@ -28,11 +28,11 @@ class CreateTable(luigi.Task):
     def run(self):
         indicator_code = get_indicator_code('covid')
         table_schema = (
-            ('percent_cli', 'float'),
-            ('cli_se', 'float'),
-            ('percent_cli_unw', 'float'),
-            ('cli_se_unw', 'float'),
-            ('cli_sample_size', 'NUMERIC'),
+            ('pct_covid', 'float'),
+            ('covid_se', 'float'),
+            ('pct_covid_unw', 'float'),
+            ('covid_se_unw', 'float'),
+            ('covid_sample_size', 'NUMERIC'),
             ('percent_mc', 'float'),
             ('mc_se', 'float'),
             ('percent_mc_unw', 'float'),
@@ -69,11 +69,11 @@ class LoadTable(luigi.Task):
         run_query(f"""
             INSERT INTO {get_table_name(self.test_prefix)}
             SELECT 
-                percent_cli,
-                cli_se,
-                percent_cli_unw,
-                cli_se_unw,
-                a.sample_size AS cli_sample_size,
+                pct_covid,
+                covid_se,
+                pct_covid_unw,
+                covid_se_unw,
+                a.sample_size AS covid_sample_size,
                 percent_mc,
                 mc_se,
                 percent_mc_unw,
@@ -84,7 +84,7 @@ class LoadTable(luigi.Task):
                 a.gid_0, 
                 a.survey_date
             FROM rpl_covid_survey_covid a
-            INNER JOIN rpl_covid_survey_mask b
+            LEFT JOIN rpl_covid_survey_mask b
             ON a.survey_date = b.survey_date
             AND a.iso_code = b.iso_code
             WHERE
