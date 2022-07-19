@@ -3,6 +3,7 @@
 import pandas as pd
 import luigi
 import sqlite3
+import csv
 
 from lab_params import *
 
@@ -60,13 +61,11 @@ def load_file_in_table(
         print('\n\n')
 
     print('-----------------------\nFile loading: STARTED\n-----------------------\n')
-    with open(file_path, 'r', encoding=file_encoding) as f:
-        if skip_header:
-            next(f)
-        cur.copy_from(f, table_name, sep=sep)
-        conn.commit()
+    insert_statement = f"INSERT INTO {table_name} ({', '.join([col[0] for col in table_schema])}) VALUES({', '.join(['?' for col in table_schema])})"
+    print(insert_statement)
+    df = pd.read_csv(file_path, sep=sep)
+    df.to_sql(table_name, con=conn, if_exists='append', index=False)
     conn.close()
-
     print('-----------------------\nFile loading: FINISHED\n-----------------------\n')
 
 
@@ -77,9 +76,12 @@ def query_db(query):
     conn.close()
     return output
 
+
 # Runs query, returns nothing
-def run_query(query):
+def run_query(query, verbose=False):
     conn, cur = connect_db()
+    if verbose:
+        print(query)
     cur.execute(query)
     conn.commit()
     conn.close()
@@ -105,7 +107,7 @@ class TableExists(luigi.Target):
         self.table_name = table_name
 
     def exists(self):
-        return table_exists()
+        return table_exists(self.table_name)
 
 
 class DataExists(luigi.Target):
@@ -122,13 +124,25 @@ class DataExists(luigi.Target):
             return False
 
 
+class DummyOutput(luigi.Target):
+    def __init__(self, dummy_variable=False):
+        super().__init__()
+        self.dummy_variable = dummy_variable
+
+    def exits(self):
+        print(f'DummyOutput: {self.dummy_variable}')
+        if self.dummy_variable:
+            return True
+        else:
+            return False
+
+
 # #########################
 # Other auxiliary functions
 # #########################
 
 def get_indicator_code(indicator):
     indicator_to_code = {
-        'covid': 'cli',
         'flu': 'ili',
         'mask': 'mc',
         'contact': 'dc',

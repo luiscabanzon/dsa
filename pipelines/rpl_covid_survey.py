@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
-from dsa.lab_utils import *
+from lab_utils import *
 
 import luigi
 import requests
 import json
+import os
+import pandas as pd
 
 
 # ###################
@@ -14,7 +16,7 @@ import json
 # Renders the file path for the report to download
 def get_file_path(indicator, country, date):
     date_no_dash = date.replace('-', '')
-    return f'data/raw/covid_survey__{indicator}__{country}__{date_no_dash}__{date_no_dash}.txt'
+    return os.path.join(RAW_DATA_FOLDER_PATH, f'covid_survey__{indicator}__{country}__{date_no_dash}__{date_no_dash}.txt')
 
 # Renders the table name for each different indicator
 def get_table_name(indicator, test_prefix):
@@ -34,10 +36,11 @@ class CreateTable(luigi.Task):
 
     def run(self):
         indicator_code = get_indicator_code(self.indicator)
+        percent = 'pct' if self.indicator == 'covid' else 'percent'
         table_schema = (
-            (f'percent_{indicator_code}', 'float'),
+            (f'{percent}_{indicator_code}', 'float'),
             (f'{indicator_code}_se', 'float'),
-            (f'percent_{indicator_code}_unw', 'float'),
+            (f'{percent}_{indicator_code}_unw', 'float'),
             (f'{indicator_code}_se_unw', 'float'),
             ('sample_size', 'NUMERIC'),
             ('country', 'text'),
@@ -60,10 +63,15 @@ class DownloadAPIReport(luigi.Task):
     date = luigi.Parameter()
 
     def run(self):
-        date_no_dash = self.date.replace('-', '')
+        # Create folder is not existing
+        if RAW_DATA_FOLDER_PATH not in os.listdir():
+            os.mkdir(RAW_DATA_FOLDER_PATH)
         file_path = get_file_path(self.indicator, self.country, self.date)
+        # Get params for API call
+        date_no_dash = self.date.replace('-', '')
         url = f"https://covidmap.umd.edu/api/resources?indicator={self.indicator}&type=daily&country={self.country}&daterange={date_no_dash}-{date_no_dash}"
-        print(url)
+        # Call API and save respond in CSV
+        print("CALLING API: ", url)
         response = requests.get(url).text
         response_dict = json.loads(response)
         df = pd.DataFrame.from_dict(response_dict['data'])
@@ -92,7 +100,25 @@ class LoadReportIntoDB(luigi.Task):
 
     def run(self):
         file_path = get_file_path(self.indicator, self.country, self.date)
-        load_file_in_table(file_path, get_table_name(self.indicator, self.test_prefix), overwrite_filter=self.get_sql_filter())
+        indicator_code = get_indicator_code(self.indicator)
+        table_schema = (
+            (f'percent_{indicator_code}', 'float'),
+            (f'{indicator_code}_se', 'float'),
+            (f'percent_{indicator_code}_unw', 'float'),
+            (f'{indicator_code}_se_unw', 'float'),
+            ('sample_size', 'NUMERIC'),
+            ('country', 'text'),
+            ('iso_code', 'text'),
+            ('gid_0', 'text'),
+            ('survey_date', 'NUMERIC'),
+        )
+        load_file_in_table(
+            file_path,
+            get_table_name(self.indicator, self.test_prefix),
+            table_schema=table_schema,
+            overwrite_filter=self.get_sql_filter(),
+            skip_header=True,
+        )
 
     def output(self):
         return DataExists(table_name=get_table_name(self.indicator, self.test_prefix), where_clause=self.get_sql_filter())
@@ -106,7 +132,7 @@ class MasterTask(luigi.WrapperTask):
     date = luigi.Parameter()
 
     def requires(self):
-        for indicator in ['mask', 'finance']:
+        for indicator in ['mask', 'covid']:
             for country in ['Germany', 'Japan']:
                 yield LoadReportIntoDB(indicator=indicator, country=country, date=self.date, test_prefix=self.test_prefix)
 

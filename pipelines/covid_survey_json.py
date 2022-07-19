@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 
-from dsa.lab_utils import *
+from lab_utils import *
 
 import luigi
-import requests
-import json
+from jinja2 import Template
 
 
 # ###################
@@ -16,8 +15,8 @@ def get_table_name(test_prefix):
     return f'{test_prefix}covid_survey_json'
 
 INDICATORS = (
-    'mask',
     'covid',
+    'mask',
     'tested_positive_14d',
     'anosmia',
 )
@@ -69,52 +68,49 @@ class LoadTable(luigi.Task):
 
         JOIN_STATEMENT = f'{INDICATORS[0]}'
         for i in range(1, len(INDICATORS)):
+            # NOTE: SQLite doesn't support FULL OUTER JOIN
             JOIN_STATEMENT += """
-                FULL OUTER JOIN {i1}
+                LEFT JOIN {i1}
                 ON {i0}.iso_code = {i1}.iso_code
                 AND {i0}.survey_date = {i1}.survey_date
-            """.format(i0=INDICATORS[i-1], i1=INDICATORS[i])
+            """.format(i0=INDICATORS[0], i1=INDICATORS[i])
 
         WITH_STATEMENT = ',\n'.join(['{i} AS (SELECT * FROM rpl_covid_survey_{i} WHERE survey_date={data_date})'.format(i=i, data_date=data_date) for i in INDICATORS])
 
-        percent_json = ','.join([""" "{i}": ', COALESCE(CAST(percent_{code} AS TEXT), 'null'), ' """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
-        json_se = ','.join([""" "{i}": ', COALESCE(CAST({code}_se AS TEXT), 'null'), ' """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
-        percent_json_unw = ','.join([""" "{i}": ', COALESCE(CAST(percent_{code}_unw AS TEXT), 'null'), ' """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
-        json_se_unw = ','.join([""" "{i}": ', COALESCE(CAST({code}_se_unw AS TEXT), 'null'), ' """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
-        json_sample_size = ','.join([""" "{i}": ', COALESCE(CAST({i}.sample_size AS TEXT), 'null'), ' """.format(i=i) for i in INDICATORS])
+        # String manipulation to concatenate different indicators withing a JSON-formatted string
+        percent_json = ' || '.join([""" '"{i}": ' || COALESCE(CAST({percent}_{code} AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i), percent = 'pct' if i == 'covid' else 'percent') for i in INDICATORS])
+        json_se = ' || '.join([""" '"{i}": ' || COALESCE(CAST({code}_se AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
+        percent_json_unw = ' || '.join([""" '"{i}": ' || COALESCE(CAST({percent}_{code}_unw AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i), percent = 'pct' if i == 'covid' else 'percent') for i in INDICATORS])
+        json_se_unw = ' || '.join([""" '"{i}": ' || COALESCE(CAST({code}_se_unw AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
+        json_sample_size = ' || '.join([""" '"{i}": ' || COALESCE(CAST({i}.sample_size AS TEXT), 'null') """.format(i=i) for i in INDICATORS])
 
         country = 'COALESCE(%s)' % ', '.join([f'{i}.country' for i in INDICATORS])
         iso_code = 'COALESCE(%s)' % ', '.join([f'{i}.iso_code' for i in INDICATORS])
         gid_0 = 'COALESCE(%s)' % ', '.join([f'{i}.gid_0' for i in INDICATORS])
 
-        # Detele data from the data we are inserting into (overwrite)
+        # Delete data from the data we are inserting into (overwrite)
         run_query(f"DELETE FROM {get_table_name(self.test_prefix)} WHERE {self.get_sql_filter()}")
         # Insert data
-        query = """
-            WITH {WITH_STATEMENT}
-            INSERT INTO {table_name}
-            SELECT 
-                JSON(
-                    CONCAT('{{{percent_json}}}')
-                ) AS percent_json,
-                JSON(
-                    CONCAT('{{{json_se}}}')
-                ) AS json_se,
-                JSON(
-                    CONCAT('{{{percent_json_unw}}}')
-                ) AS percent_json_unw,
-                JSON(
-                    CONCAT('{{{json_se_unw}}}')
-                ) AS json_se_unw,
-                JSON(
-                    CONCAT('{{{json_sample_size}}}')
-                ) AS json_sample_size,
-                {country} AS country, 
-                {iso_code} AS iso_code,
-                {gid_0} AS gid_0,
-                {data_date} AS survey_date
-            FROM {JOIN_STATEMENT}
-        """.format(
+        query = Template("""
+            WITH {{WITH_STATEMENT}}
+            INSERT INTO {{table_name}}
+            SELECT
+                '{' || {{percent_json}} || '}'
+                AS percent_json,
+                '{' || {{json_se}} || '}'
+                AS json_se,
+                '{' || {{percent_json_unw}} || '}'
+                AS percent_json_unw,
+                '{' || {{json_se_unw}} || '}'
+                AS json_se_unw,
+                '{' || {{json_sample_size}} || '}'
+                AS json_sample_size,
+                {{country}} AS country, 
+                {{iso_code}} AS iso_code,
+                {{gid_0}} AS gid_0,
+                {{data_date}} AS survey_date
+            FROM {{JOIN_STATEMENT}}
+        """).render(
             table_name=get_table_name(self.test_prefix),
             data_date=data_date,
             WITH_STATEMENT=WITH_STATEMENT,
