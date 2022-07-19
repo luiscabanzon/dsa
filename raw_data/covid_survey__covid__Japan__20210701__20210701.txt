@@ -1,0 +1,2 @@
+pct_covid	covid_se	pct_covid_unw	covid_se_unw	sample_size	country	iso_code	gid_0	survey_date
+0.004077	0.001014	0.004395	0.00086	5916.0	Japan	JPN	JPN	20210701

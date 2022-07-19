@@ -1,0 +1,2 @@
+pct_tested_positive_14d	tested_positive_14d_se	pct_tested_positive_14d_unw	tested_positive_14d_se_unw	sample_size	country	iso_code	gid_0	survey_date
+					Germany	DEU	DEU	20210701

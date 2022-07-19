@@ -1,0 +1,1274 @@
+country	region
+Albania	Tiranë
+Algeria	Alger
+Algeria	Annaba
+Algeria	Batna
+Algeria	Béjaïa
+Algeria	Biskra
+Algeria	Blida
+Algeria	Constantine
+Algeria	Oran
+Algeria	Sétif
+Algeria	Tizi Ouzou
+Angola	Luanda
+Argentina	Buenos Aires
+Argentina	Catamarca
+Argentina	Chaco
+Argentina	Chubut
+Argentina	Ciudad Autónoma de Buenos Aires
+Argentina	Córdoba
+Argentina	Córdoba (Argentina)
+Argentina	Corrientes
+Argentina	Entre Ríos
+Argentina	Formosa
+Argentina	Jujuy
+Argentina	La Pampa
+Argentina	La Rioja
+Argentina	Mendoza
+Argentina	Misiones
+Argentina	Neuquén
+Argentina	Río Negro
+Argentina	Salta
+Argentina	San Juan
+Argentina	San Luis
+Argentina	Santa Cruz
+Argentina	Santa Fe
+Argentina	Santiago del Estero
+Argentina	Tierra del Fuego
+Argentina	Tucumán
+Armenia	Erevan
+Australia	Australian Capital Territory
+Australia	New South Wales
+Australia	Northern Territory
+Australia	Queensland
+Australia	South Australia
+Australia	Tasmania
+Australia	Victoria
+Australia	Western Australia
+Austria	Burgenland
+Austria	Kärnten
+Austria	Niederösterreich
+Austria	Oberösterreich
+Austria	Salzburg
+Austria	Steiermark
+Austria	Tirol
+Austria	Vorarlberg
+Austria	Wien
+Azerbaijan	Baku
+Bangladesh	Barisal
+Bangladesh	Chittagong
+Bangladesh	Dhaka
+Bangladesh	Khulna
+Bangladesh	Mymensingh
+Bangladesh	Rajasahi
+Bangladesh	Rangur
+Bangladesh	Sylhet
+Belarus	Brest
+Belarus	Homyel'
+Belarus	Hrodna
+Belarus	Minsk
+Belarus	Vitsyebsk
+Belgium	Bruxelles
+Belgium	Vlaanderen
+Belgium	Wallonie
+Bolivia	Chuquisaca
+Bolivia	Cochabamba
+Bolivia	El Beni
+Bolivia	La Paz
+Bolivia	La Paz (Bolivia)
+Bolivia	Oruro
+Bolivia	Potosí
+Bolivia	Santa Cruz
+Bolivia	Santa Cruz (Bolivia)
+Bolivia	Tarija
+Bosnia and Herzegovina	Federacija Bosna i Hercegovina
+Bosnia and Herzegovina	Repuplika Srpska
+Brazil	Acre
+Brazil	Alagoas
+Brazil	Amapá
+Brazil	Amazonas
+Brazil	Amazonas (Brazil)
+Brazil	Bahia
+Brazil	Ceará
+Brazil	Distrito Federal
+Brazil	Distrito Federal (Brazil)
+Brazil	Espírito Santo
+Brazil	Goiás
+Brazil	Maranhão
+Brazil	Mato Grosso
+Brazil	Mato Grosso do Sul
+Brazil	Minas Gerais
+Brazil	Pará
+Brazil	Paraíba
+Brazil	Paraná
+Brazil	Pernambuco
+Brazil	Piauí
+Brazil	Rio de Janeiro
+Brazil	Rio Grande do Norte
+Brazil	Rio Grande do Sul
+Brazil	Rondônia
+Brazil	Roraima
+Brazil	Santa Catarina
+Brazil	Santa Catarina (Brazil)
+Brazil	São Paulo
+Brazil	Sergipe
+Brazil	Tocantins
+Bulgaria	Blagoevgrad
+Bulgaria	Burgas
+Bulgaria	Grad Sofiya
+Bulgaria	Pazardzhik
+Bulgaria	Plovdiv
+Bulgaria	Razgrad
+Bulgaria	Ruse
+Bulgaria	Sofia
+Bulgaria	Sofia (Bulgaria)
+Bulgaria	Stara Zagora
+Bulgaria	Varna
+Bulgaria	Veliko Tarnovo
+Burkina Faso	Centre
+Cambodia	Phnom Penh
+Cameroon	Centre
+Cameroon	Littoral
+Cameroon	Nord-Ouest
+Canada	Alberta
+Canada	British Columbia
+Canada	Manitoba
+Canada	New Brunswick
+Canada	Newfoundland and Labrador
+Canada	Nova Scotia
+Canada	Ontario
+Canada	Prince Edward Island
+Canada	Québec
+Canada	Saskatchewan
+Chile	Antofagasta
+Chile	Araucanía
+Chile	Arica y Parinacota
+Chile	Atacama
+Chile	Bío-Bío
+Chile	Coquimbo
+Chile	Libertador General Bernardo O'Higgins
+Chile	Los Lagos
+Chile	Los Ríos
+Chile	Magallanes y Antártica Chilena
+Chile	Maule
+Chile	Ñuble
+Chile	Región Metropolitana de Santiago
+Chile	Tarapacá
+Chile	Valparaíso
+Colombia	Antioquia
+Colombia	Atlántico
+Colombia	Bogotá, Distrito Capital
+Colombia	Bolívar
+Colombia	Boyacá
+Colombia	Caldas
+Colombia	Casanare
+Colombia	Cauca
+Colombia	Cesar
+Colombia	Córdoba
+Colombia	Cundinamarca
+Colombia	Huila
+Colombia	La Guajira
+Colombia	Magdalena
+Colombia	Meta
+Colombia	Nariño
+Colombia	Norte de Santander
+Colombia	Putumayo
+Colombia	Quindío
+Colombia	Risaralda
+Colombia	Santander
+Colombia	Sucre
+Colombia	Tolima
+Colombia	Valle del Cauca
+Costa Rica	Alajuela
+Costa Rica	Cartago
+Costa Rica	Guanacaste
+Costa Rica	Heredia
+Costa Rica	Limón
+Costa Rica	Puntarenas
+Costa Rica	San José
+Costa Rica	San José (Costa Rica)
+Côte d'Ivoire	Autonome d'Abidjan
+Côte d'Ivoire	Lagunes
+Croatia	Brodsko-Posavska
+Croatia	Grad Zagreb
+Croatia	Istarska
+Croatia	Koprivničko-Križevačka
+Croatia	Medimurska
+Croatia	Osjecko-Baranjska
+Croatia	Primorsko-Goranska
+Croatia	Šibensko-Kninska
+Croatia	Sisacko-Moslavacka
+Croatia	Splitsko-Dalmatinska
+Croatia	Varaždinska
+Croatia	Vukovarsko-Srijemska
+Croatia	Zadarska
+Croatia	Zagrebačka
+Czech Republic	Jihočeský
+Czech Republic	Jihomoravský
+Czech Republic	Karlovarský
+Czech Republic	Kraj Vysočina
+Czech Republic	Královéhradecký
+Czech Republic	Liberecký
+Czech Republic	Moravskoslezský
+Czech Republic	Olomoucký
+Czech Republic	Pardubický
+Czech Republic	Plzeňský
+Czech Republic	Prague
+Czech Republic	Středočeský
+Czech Republic	Ústecký
+Czech Republic	Zlínský
+Denmark	Hovedstaden
+Denmark	Midtjylland
+Denmark	Nordjylland
+Denmark	Sjælland
+Denmark	Syddanmark
+Dominican Republic	Distrito Nacional
+Dominican Republic	La Altagracia
+Dominican Republic	La Romana
+Dominican Republic	La Vega
+Dominican Republic	San Cristóbal
+Dominican Republic	San Pedro de Macorís
+Dominican Republic	Santiago
+Dominican Republic	Santo Domingo
+Ecuador	Azuay
+Ecuador	Cañar
+Ecuador	Chimborazo
+Ecuador	Cotopaxi
+Ecuador	El Oro
+Ecuador	Esmeraldas
+Ecuador	Guayas
+Ecuador	Imbabura
+Ecuador	Loja
+Ecuador	Los Rios
+Ecuador	Manabi
+Ecuador	Orellana
+Ecuador	Pichincha
+Ecuador	Santa Elena
+Ecuador	Santo Domingo de los Tsachilas
+Ecuador	Tungurahua
+Egypt	Ad Daqahliyah
+Egypt	Al Bahr al Ahmar
+Egypt	Al Buhayrah
+Egypt	Al Fayyum
+Egypt	Al Gharbiyah
+Egypt	Al Iskandariyah
+Egypt	Al Isma`iliyah
+Egypt	Al Jizah
+Egypt	Al Minufiyah
+Egypt	Al Minya
+Egypt	Al Qahirah
+Egypt	Al Qalyubiyah
+Egypt	Ash Sharqiyah
+Egypt	As Suways
+Egypt	Aswan
+Egypt	Asyut
+Egypt	Bani Suwayf
+Egypt	Bur Sa`id
+Egypt	Dumyat
+Egypt	Kafr ash Shaykh
+Egypt	Qina
+Egypt	Suhaj
+El Salvador	Ahuachapán
+El Salvador	La Libertad
+El Salvador	La Paz
+El Salvador	San Miguel
+El Salvador	San Salvador
+El Salvador	San Salvador (El Salvador)
+El Salvador	Santa Ana
+El Salvador	Sonsonate
+El Salvador	Usulután
+Ethiopia	Addis Abeba
+Ethiopia	Amhara
+Ethiopia	Oromia
+Ethiopia	Southern Nations, Nationalities and Peoples
+Finland	Etelä-Karjala
+Finland	Etelä-Pohjanmaa
+Finland	Kanta-Häme
+Finland	Keski-Pohjanmaa
+Finland	Keski-Suomi
+Finland	Kymenlaakso
+Finland	Lappi
+Finland	Päijät-Häme
+Finland	Pirkanmaa
+Finland	Pohjanmaa
+Finland	Pohjois-Pohjanmaa
+Finland	Pohjois-Savo
+Finland	Satakunta
+Finland	Uusimaa
+Finland	Varsinais-Suomi
+France	Auvergne-Rhône-Alpes
+France	Bourgogne-Franche-Comté
+France	Bretagne
+France	Centre-Val de Loire
+France	Corse
+France	Grand Est
+France	Hauts-de-France
+France	Île-de-France
+France	Normandie
+France	Nouvelle-Aquitaine
+France	Occitanie
+France	Pays de la Loire
+France	Provence-Alpes-Côte d'Azur
+Germany	Baden-Württemberg
+Germany	Bayern
+Germany	Berlin
+Germany	Brandenburg
+Germany	Bremen
+Germany	Hamburg
+Germany	Hessen
+Germany	Mecklenburg-Vorpommern
+Germany	Niedersachsen
+Germany	Nordrhein-Westfalen
+Germany	Rheinland-Pfalz
+Germany	Saarland
+Germany	Sachsen
+Germany	Sachsen-Anhalt
+Germany	Schleswig-Holstein
+Germany	Thüringen
+Ghana	Ashanti
+Ghana	Central
+Ghana	Eastern
+Ghana	Greater Accra
+Ghana	North East
+Ghana	Western
+Greece	Anatoliki Makedonia Thraki
+Greece	Attiki
+Greece	Dytiki Ellada
+Greece	Dytiki Makedonia
+Greece	Ionia Nisia
+Greece	Ipeiros
+Greece	Kentriki Makedonia
+Greece	Kriti
+Greece	Notio Aigaio
+Greece	Peloponnisos
+Greece	Sterea Ellada
+Greece	Thessalia
+Greece	Voreio Aigaio
+Guatemala	Chimaltenango
+Guatemala	Escuintla
+Guatemala	Guatemala
+Guatemala	Quezaltenango
+Guatemala	Sacatepéquez
+Guinea	Conakry
+Haiti	Ouest
+Honduras	Atlántida
+Honduras	Choluteca
+Honduras	Comayagua
+Honduras	Cortés
+Honduras	Francisco Morazán
+Honduras	Yoro
+Hong Kong	Central and Western
+Hong Kong	Eastern
+Hong Kong	Islands
+Hong Kong	Kowloon City
+Hong Kong	Kwun Tong
+Hong Kong	North
+Hong Kong	Sai Kung
+Hong Kong	Sham Shui Po
+Hong Kong	Sha Tin
+Hong Kong	Tsuen Wan
+Hong Kong	Tuen Mun
+Hong Kong	Yuen Long
+Hungary	Bács-Kiskun
+Hungary	Baranya
+Hungary	Békés
+Hungary	Borsod-Abaúj-Zemplén
+Hungary	Budapest
+Hungary	Csongrád
+Hungary	Fejér
+Hungary	Gyor-Moson-Sopron
+Hungary	Hajdú-Bihar
+Hungary	Heves
+Hungary	Jász-Nagykun-Szolnok
+Hungary	Komárom-Esztergom
+Hungary	Nógrád
+Hungary	Pest
+Hungary	Somogy
+Hungary	Szabolcs-Szatmár-Bereg
+Hungary	Tolna
+Hungary	Vas
+Hungary	Veszprém
+Hungary	Zala
+India	Andhra Pradesh
+India	Arunachal Pradesh
+India	Assam
+India	Bihar
+India	Chandigarh
+India	Chhattisgarh
+India	Goa
+India	Gujarat
+India	Haryana
+India	Himachal Pradesh
+India	Jammu and Kashmir
+India	Jharkhand
+India	Karnataka
+India	Kerala
+India	Madhya Pradesh
+India	Maharashtra
+India	Manipur
+India	Meghalaya
+India	Mizoram
+India	Nagaland
+India	NCT of Delhi
+India	Odisha
+India	Puducherry
+India	Punjab
+India	Rajasthan
+India	Sikkim
+India	Tamil Nadu
+India	Telangana
+India	Tripura
+India	Uttarakhand
+India	Uttar Pradesh
+India	West Bengal
+Indonesia	Aceh
+Indonesia	Bali
+Indonesia	Bangka Belitung
+Indonesia	Banten
+Indonesia	Jakarta Raya
+Indonesia	Jambi
+Indonesia	Jawa Barat
+Indonesia	Jawa Tengah
+Indonesia	Jawa Timur
+Indonesia	Kalimantan Barat
+Indonesia	Kalimantan Selatan
+Indonesia	Kalimantan Tengah
+Indonesia	Kalimantan Timur
+Indonesia	Kepulauan Riau
+Indonesia	Lampung
+Indonesia	Maluku
+Indonesia	Nusa Tenggara Barat
+Indonesia	Nusa Tenggara Timur
+Indonesia	Papua
+Indonesia	Papua Barat
+Indonesia	Riau
+Indonesia	Sulawesi Barat
+Indonesia	Sulawesi Selatan
+Indonesia	Sulawesi Tengah
+Indonesia	Sulawesi Tenggara
+Indonesia	Sulawesi Utara
+Indonesia	Sumatera Barat
+Indonesia	Sumatera Selatan
+Indonesia	Sumatera Utara
+Indonesia	Yogyakarta
+Iraq	Al-Anbar
+Iraq	Al-Basrah
+Iraq	Al-Qadissiya
+Iraq	Al-Sulaymaniyah
+Iraq	Babil
+Iraq	Baghdad
+Iraq	Dahuk
+Iraq	Diyala
+Iraq	Erbil
+Iraq	Kerbala
+Iraq	Kirkuk
+Iraq	Missan
+Iraq	Najaf
+Iraq	Ninewa
+Iraq	Salah Al-Din
+Iraq	Thi-Qar
+Iraq	Wassit
+Ireland	Clare
+Ireland	Cork
+Ireland	Donegal
+Ireland	Dublin
+Ireland	Galway
+Ireland	Kerry
+Ireland	Kildare
+Ireland	Limerick
+Ireland	Louth
+Ireland	Mayo
+Ireland	Meath
+Ireland	Tipperary
+Ireland	Waterford
+Ireland	Westmeath
+Ireland	Wexford
+Ireland	Wicklow
+Israel	HaDarom
+Israel	Haifa
+Israel	HaMerkaz
+Israel	HaZafon
+Israel	Jerusalem
+Israel	Tel Aviv
+Italy	Abruzzo
+Italy	Basilicata
+Italy	Calabria
+Italy	Campania
+Italy	Emilia-Romagna
+Italy	Friuli-Venezia Giulia
+Italy	Lazio
+Italy	Liguria
+Italy	Lombardia
+Italy	Marche
+Italy	Molise
+Italy	Piemonte
+Italy	Puglia
+Italy	Sardegna
+Italy	Sicilia
+Italy	Toscana
+Italy	Trentino-Alto Adige
+Italy	Umbria
+Italy	Valle d'Aosta
+Italy	Veneto
+Japan	Aichi
+Japan	Akita
+Japan	Aomori
+Japan	Chiba
+Japan	Ehime
+Japan	Fukui
+Japan	Fukuoka
+Japan	Fukushima
+Japan	Gifu
+Japan	Gunma
+Japan	Hiroshima
+Japan	Hokkaido
+Japan	Hyōgo
+Japan	Ibaraki
+Japan	Ishikawa
+Japan	Iwate
+Japan	Kagawa
+Japan	Kagoshima
+Japan	Kanagawa
+Japan	Kochi
+Japan	Kumamoto
+Japan	Kyoto
+Japan	Mie
+Japan	Miyagi
+Japan	Miyazaki
+Japan	Nagano
+Japan	Nagasaki
+Japan	Nara
+Japan	Niigata
+Japan	Oita
+Japan	Okayama
+Japan	Okinawa
+Japan	Osaka
+Japan	Saga
+Japan	Saitama
+Japan	Shiga
+Japan	Shimane
+Japan	Shizuoka
+Japan	Tochigi
+Japan	Tokushima
+Japan	Tokyo
+Japan	Tottori
+Japan	Toyama
+Japan	Wakayama
+Japan	Yamagata
+Japan	Yamaguchi
+Japan	Yamanashi
+Jordan	Amman
+Jordan	Balqa
+Jordan	Irbid
+Jordan	Mafraq
+Jordan	Zarqa
+Kazakhstan	Almaty
+Kazakhstan	Atyrau
+Kazakhstan	Nur-Sultan (Astana)
+Kazakhstan	Qaraghandy
+Kenya	Bungoma
+Kenya	Kajiado
+Kenya	Kakamega
+Kenya	Kiambu
+Kenya	Kisii
+Kenya	Kisumu
+Kenya	Machakos
+Kenya	Mombasa
+Kenya	Nairobi
+Kenya	Nakuru
+Kenya	Nyeri
+Kenya	Uasin Gishu
+Kuwait	Al Ahmadi
+Kuwait	Al Farwaniyah
+Kuwait	Hawalli
+Kyrgyzstan	Biškek
+Laos	Vientiane
+Lebanon	Beirut
+Lebanon	Mount Lebanon
+Lebanon	South
+Libya	Benghazi
+Libya	Misratah
+Libya	Tripoli
+Madagascar	Analamanga
+Malaysia	Johor
+Malaysia	Kedah
+Malaysia	Kelantan
+Malaysia	Kuala Lumpur
+Malaysia	Melaka
+Malaysia	Negeri Sembilan
+Malaysia	Pahang
+Malaysia	Perak
+Malaysia	Pulau Pinang
+Malaysia	Sabah
+Malaysia	Sarawak
+Malaysia	Selangor
+Malaysia	Terengganu
+Mali	Bamako
+Mauritania	Nouakchott
+Mexico	Aguascalientes
+Mexico	Baja California
+Mexico	Baja California Sur
+Mexico	Campeche
+Mexico	Chiapas
+Mexico	Chihuahua
+Mexico	Coahuila
+Mexico	Colima
+Mexico	Distrito Federal
+Mexico	Distrito Federal (Mexico)
+Mexico	Durango
+Mexico	Guanajuato
+Mexico	Guerrero
+Mexico	Hidalgo
+Mexico	Jalisco
+Mexico	México
+Mexico	Michoacán
+Mexico	Morelos
+Mexico	Nayarit
+Mexico	Nuevo León
+Mexico	Oaxaca
+Mexico	Puebla
+Mexico	Querétaro
+Mexico	Quintana Roo
+Mexico	San Luis Potosí
+Mexico	Sinaloa
+Mexico	Sonora
+Mexico	Tabasco
+Mexico	Tamaulipas
+Mexico	Tlaxcala
+Mexico	Veracruz
+Mexico	Yucatán
+Mexico	Zacatecas
+Moldova	Chişinău
+Morocco	Casablanca-Settat
+Morocco	Fès-Meknès
+Morocco	Marrakesh-Safi
+Morocco	Oriental
+Morocco	Rabat-Salé-Kénitra
+Morocco	Souss-Massa
+Morocco	Tanger-Tetouan-Al Hoceima
+Mozambique	Gaza
+Mozambique	Maputo
+Mozambique	Maputo City
+Myanmar	Mandalay
+Myanmar	Shan
+Myanmar	Yangon
+Nepal	Bagmati Pradesh
+Nepal	Gandaki Pradesh
+Nepal	Karnali Pradesh
+Nepal	Province No. 1
+Nepal	Province No. 2
+Nepal	Province No. 5
+Nepal	Sudurpashchim Pradesh
+Netherlands	Drenthe
+Netherlands	Flevoland
+Netherlands	Friesland
+Netherlands	Gelderland
+Netherlands	Groningen
+Netherlands	Limburg
+Netherlands	Noord-Brabant
+Netherlands	Noord-Holland
+Netherlands	Overijssel
+Netherlands	Utrecht
+Netherlands	Zeeland
+Netherlands	Zuid-Holland
+New Zealand	Auckland
+New Zealand	Bay of Plenty
+New Zealand	Canterbury
+New Zealand	Canterbury (New Zealand)
+New Zealand	Hawke's Bay
+New Zealand	Manawatu-Wanganui
+New Zealand	Marlborough
+New Zealand	Northland
+New Zealand	Otago
+New Zealand	Southland
+New Zealand	Taranaki
+New Zealand	Waikato
+New Zealand	Wellington
+Nicaragua	Atlántico Sur
+Nicaragua	Carazo
+Nicaragua	Chinandega
+Nicaragua	Estelí
+Nicaragua	León
+Nicaragua	Managua
+Nicaragua	Masaya
+Nicaragua	Matagalpa
+Nigeria	Adamawa
+Nigeria	Akwa Ibom
+Nigeria	Bauchi
+Nigeria	Borno
+Nigeria	Edo
+Nigeria	Federal Capital Territory
+Nigeria	Imo
+Nigeria	Kaduna
+Nigeria	Kano
+Nigeria	Katsina
+Nigeria	Kwara
+Nigeria	Lagos
+Nigeria	Ogun
+Nigeria	Osun
+Nigeria	Oyo
+Nigeria	Rivers
+Norway	Agder
+Norway	Innlandet
+Norway	Møre og Romsdal
+Norway	Nordland
+Norway	Oslo
+Norway	Rogaland
+Norway	Troms og Finnmark
+Norway	Trøndelag
+Norway	Vestfold og Telemark
+Norway	Vestland
+Norway	Viken
+Oman	Muscat
+Pakistan	AJK (Azad Jammu Kashmir)
+Pakistan	BA (Balochistan)
+Pakistan	ICT (Islamabad Capital Territory)
+Pakistan	KPK (Khyber Pakhtunkhwa)
+Pakistan	PB (Punjab)
+Pakistan	SD (Sindh)
+Palestine	Gaza
+Palestine	West Bank
+Panama	Chiriquí
+Panama	Panamá
+Panama	Panamá Oeste
+Paraguay	Alto Paraná
+Paraguay	Asunción
+Paraguay	Caaguazú
+Paraguay	Central
+Paraguay	Itapúa
+Peru	Amazonas
+Peru	Ancash
+Peru	Arequipa
+Peru	Cajamarca
+Peru	Callao
+Peru	Cusco
+Peru	Huánuco
+Peru	Ica
+Peru	Junín
+Peru	La Libertad
+Peru	Lambayeque
+Peru	Lima
+Peru	Lima Province
+Peru	Loreto
+Peru	Moquegua
+Peru	Piura
+Peru	Puno
+Peru	San Martín
+Peru	Tacna
+Peru	Tumbes
+Peru	Ucayali
+Philippines	Bangsamoro Autonomous Region in Muslim Mindanao
+Philippines	Bicol Region
+Philippines	Cagayan Valley
+Philippines	Calabarzon
+Philippines	Caraga
+Philippines	Central Luzon
+Philippines	Central Visayas
+Philippines	Cordillera Admin Region
+Philippines	Davao Region
+Philippines	Eastern Visayas
+Philippines	Ilocos Region
+Philippines	Mimaropa
+Philippines	National Capital Region
+Philippines	Northern Mindanao
+Philippines	Soccsksargen
+Philippines	Western Visayas
+Philippines	Zamboanga Peninsula
+Poland	Dolnośląskie
+Poland	Kujawsko-Pomorskie
+Poland	Łódzkie
+Poland	Lubelskie
+Poland	Lubuskie
+Poland	Małopolskie
+Poland	Mazowieckie
+Poland	Opolskie
+Poland	Podkarpackie
+Poland	Podlaskie
+Poland	Pomorskie
+Poland	Śląskie
+Poland	Świętokrzyskie
+Poland	Warmińsko-Mazurskie
+Poland	Wielkopolskie
+Poland	Zachodniopomorskie
+Portugal	Aveiro
+Portugal	Azores
+Portugal	Beja
+Portugal	Braga
+Portugal	Bragança
+Portugal	Castelo Branco
+Portugal	Coimbra
+Portugal	Évora
+Portugal	Faro
+Portugal	Leiria
+Portugal	Lisboa
+Portugal	Madeira
+Portugal	Portalegre
+Portugal	Porto
+Portugal	Santarém
+Portugal	Setúbal
+Portugal	Viana do Castelo
+Portugal	Viseu
+Puerto Rico, U.S.	Arecibo
+Puerto Rico, U.S.	Bayamón
+Puerto Rico, U.S.	Caguas
+Puerto Rico, U.S.	Carolina
+Puerto Rico, U.S.	Guaynabo
+Puerto Rico, U.S.	Mayagüez
+Puerto Rico, U.S.	Ponce
+Puerto Rico, U.S.	San Juan
+Puerto Rico, U.S.	San Juan (Puerto Rico, U.S.)
+Puerto Rico, U.S.	Toa Baja
+Qatar	Al Doha
+Qatar	Al Rayyan
+Romania	Alba
+Romania	Arad
+Romania	Argeș
+Romania	Bacău
+Romania	Bihor
+Romania	Bistrița-Năsăud
+Romania	Botoșani
+Romania	Brăila
+Romania	Brașov
+Romania	Bucharest
+Romania	Buzău
+Romania	Călărași
+Romania	Caraș-Severin
+Romania	Cluj
+Romania	Constanța
+Romania	Covasna
+Romania	Dâmbovița
+Romania	Dolj
+Romania	Galați
+Romania	Giurgiu
+Romania	Gorj
+Romania	Harghita
+Romania	Hunedoara
+Romania	Ialomița
+Romania	Iași
+Romania	Ilfov
+Romania	Maramureș
+Romania	Mureș
+Romania	Neamț
+Romania	Olt
+Romania	Prahova
+Romania	Satu Mare
+Romania	Sibiu
+Romania	Suceava
+Romania	Teleorman
+Romania	Timiș
+Romania	Tulcea
+Romania	Vâlcea
+Romania	Vaslui
+Romania	Vrancea
+Russia	Bashkortostan
+Russia	Belgorod Oblast
+Russia	Chelyabinsk Oblast
+Russia	Irkutsk Oblast
+Russia	Kaliningrad Oblast
+Russia	Kemerovo Oblast
+Russia	Krasnodar Krai
+Russia	Krasnoyarsk Krai
+Russia	Leningrad Oblast
+Russia	Moscow
+Russia	Moscow Oblast
+Russia	Nizhny Novgorod Oblast
+Russia	Novosibirsk Oblast
+Russia	Perm Krai
+Russia	Primorsky Krai
+Russia	Rostov Oblast
+Russia	Saint Petersburg
+Russia	Samara Oblast
+Russia	Saratov Oblast
+Russia	Stavropol Krai
+Russia	Sverdlovsk Oblast
+Russia	Tatarstan
+Russia	Volgograd Oblast
+Russia	Yaroslavl Oblast
+Saudi Arabia	Al Madinah
+Saudi Arabia	Ar Riyad
+Saudi Arabia	Ash Sharqiyah
+Saudi Arabia	`Asir
+Saudi Arabia	Makkah
+Senegal	Dakar
+Serbia	Borski
+Serbia	Grad Beograd
+Serbia	Jablanički
+Serbia	Južno-Bački
+Serbia	Južno-Banatski
+Serbia	Kolubarski
+Serbia	Mačvanski
+Serbia	Nišavski
+Serbia	Podunavski
+Serbia	Pomoravski
+Serbia	Rasinski
+Serbia	Severno-Bački
+Serbia	Severno-Banatski
+Serbia	Sremski
+Serbia	Šumadijski
+Serbia	Zaječarski
+Serbia	Zlatiborski
+Singapore	Central
+Singapore	East
+Singapore	North
+Singapore	North-East
+Singapore	West
+Slovakia	Banskobystrický
+Slovakia	Bratislavský
+Slovakia	Košický
+Slovakia	Nitriansky
+Slovakia	Prešovský
+Slovakia	Trenčiansky
+Slovakia	Trnavský
+Slovakia	Žilinský
+Slovenia	Gorenjska
+Slovenia	Goriška
+Slovenia	Jugovzhodna Slovenija
+Slovenia	Osrednjeslovenska
+Slovenia	Podravska
+Slovenia	Pomurska
+Slovenia	Savinjska
+South Africa	Eastern Cape
+South Africa	Free State
+South Africa	Gauteng
+South Africa	KwaZulu-Natal
+South Africa	Limpopo
+South Africa	Mpumalanga
+South Africa	Northern Cape
+South Africa	North West
+South Africa	Western Cape
+South Korea	Busan
+South Korea	Chungcheongbuk-do
+South Korea	Chungcheongnam-do
+South Korea	Daegu
+South Korea	Daejeon
+South Korea	Gangwon-do
+South Korea	Gwangju
+South Korea	Gyeonggi-do
+South Korea	Gyeongsangbuk-do
+South Korea	Gyeongsangnam-do
+South Korea	Incheon
+South Korea	Jeju
+South Korea	Jeollanam-do
+South Korea	Seoul
+South Korea	Ulsan
+Spain	Andalucía
+Spain	Aragón
+Spain	Cantabria
+Spain	Castilla-La Mancha
+Spain	Castilla y León
+Spain	Cataluña
+Spain	Comunidad de Madrid
+Spain	Comunidad Foral de Navarra
+Spain	Comunidad Valenciana
+Spain	Extremadura
+Spain	Galicia
+Spain	Islas Baleares
+Spain	Islas Canarias
+Spain	La Rioja
+Spain	País Vasco
+Spain	Principado de Asturias
+Spain	Región de Murcia
+Sri Lanka	Colombo
+Sri Lanka	Gampaha
+Sri Lanka	Kalutara
+Sri Lanka	Kandy
+Sri Lanka	Kurunegala
+Sri Lanka	Matara
+Sudan	Al Jazirah
+Sudan	Khartoum
+Sudan	South Darfur
+Sweden	Blekinge
+Sweden	Dalarna
+Sweden	Gävleborg
+Sweden	Gotland
+Sweden	Halland
+Sweden	Jämtland
+Sweden	Jönköping
+Sweden	Kalmar
+Sweden	Kronoberg
+Sweden	Norrbotten
+Sweden	Orebro
+Sweden	Östergötland
+Sweden	Skåne
+Sweden	Södermanland
+Sweden	Stockholm
+Sweden	Uppsala
+Sweden	Värmland
+Sweden	Västerbotten
+Sweden	Västernorrland
+Sweden	Västmanland
+Sweden	Västra Götaland
+Switzerland	Aargau
+Switzerland	Basel-Landschaft
+Switzerland	Basel-Stadt
+Switzerland	Bern
+Switzerland	Fribourg
+Switzerland	Genève
+Switzerland	Graubünden
+Switzerland	Luzern
+Switzerland	Neuchâtel
+Switzerland	Schwyz
+Switzerland	Solothurn
+Switzerland	St. Gallen
+Switzerland	Thurgau
+Switzerland	Ticino
+Switzerland	Valais
+Switzerland	Vaud
+Switzerland	Zürich
+Taiwan	Changhua County
+Taiwan	Chiayi City
+Taiwan	Chiayi County
+Taiwan	Hsinchu City
+Taiwan	Hsinchu County
+Taiwan	Hualien County
+Taiwan	Kaohsiung City
+Taiwan	Keelung City
+Taiwan	Kinmen County
+Taiwan	Miaoli County
+Taiwan	Nantou County
+Taiwan	New Taipei City
+Taiwan	Pingtung County
+Taiwan	Taichung City
+Taiwan	Tainan City
+Taiwan	Taipei City
+Taiwan	Taitung County
+Taiwan	Taoyuan City
+Taiwan	Yilan County
+Taiwan	Yunlin County
+Tanzania	Dar es Salaam
+Thailand	Amnat Charoen
+Thailand	Ang Thong
+Thailand	Bangkok Metropolis
+Thailand	Buri Ram
+Thailand	Chachoengsao
+Thailand	Chaiyaphum
+Thailand	Chanthaburi
+Thailand	Chiang Mai
+Thailand	Chiang Rai
+Thailand	Chon Buri
+Thailand	Chumphon
+Thailand	Kalasin
+Thailand	Kanchanaburi
+Thailand	Khon Kaen
+Thailand	Krabi
+Thailand	Lampang
+Thailand	Lamphun
+Thailand	Loei
+Thailand	Lop Buri
+Thailand	Maha Sarakham
+Thailand	Nakhon Nayok
+Thailand	Nakhon Pathom
+Thailand	Nakhon Phanom
+Thailand	Nakhon Ratchasima
+Thailand	Nakhon Sawan
+Thailand	Nakhon Si Thammarat
+Thailand	Narathiwat
+Thailand	Nonthaburi
+Thailand	Pathum Thani
+Thailand	Phayao
+Thailand	Phetchabun
+Thailand	Phetchaburi
+Thailand	Phichit
+Thailand	Phitsanulok
+Thailand	Phra Nakhon Si Ayutthaya
+Thailand	Phuket
+Thailand	Prachin Buri
+Thailand	Prachuap Khiri Khan
+Thailand	Ratchaburi
+Thailand	Rayong
+Thailand	Roi Et
+Thailand	Sakon Nakhon
+Thailand	Samut Prakan
+Thailand	Samut Sakhon
+Thailand	Samut Songkhram
+Thailand	Saraburi
+Thailand	Sing Buri
+Thailand	Si Sa Ket
+Thailand	Songkhla
+Thailand	Suphan Buri
+Thailand	Surat Thani
+Thailand	Surin
+Thailand	Tak
+Thailand	Trang
+Thailand	Trat
+Thailand	Ubon Ratchathani
+Thailand	Udon Thani
+Thailand	Uthai Thani
+Thailand	Yala
+Tunisia	Ariana
+Tunisia	Ben Arous (Tunis Sud)
+Tunisia	Bizerte
+Tunisia	Gabès
+Tunisia	Gafsa
+Tunisia	Manubah
+Tunisia	Monastir
+Tunisia	Nabeul
+Tunisia	Sfax
+Tunisia	Sousse
+Tunisia	Tunis
+Turkey	Adana
+Turkey	Afyon
+Turkey	Ankara
+Turkey	Antalya
+Turkey	Aydin
+Turkey	Balikesir
+Turkey	Bursa
+Turkey	Çanakkale
+Turkey	Denizli
+Turkey	Diyarbakir
+Turkey	Eskisehir
+Turkey	Gaziantep
+Turkey	Hatay
+Turkey	Istanbul
+Turkey	Izmir
+Turkey	Kayseri
+Turkey	Kocaeli
+Turkey	Konya
+Turkey	Malatya
+Turkey	Manisa
+Turkey	Mersin
+Turkey	Mugla
+Turkey	Sakarya
+Turkey	Samsun
+Turkey	Sanliurfa
+Turkey	Tekirdag
+Turkey	Trabzon
+Turkey	Zinguldak
+Ukraine	Cherkasy
+Ukraine	Chernihiv
+Ukraine	Chernivtsi
+Ukraine	Dnipropetrovs'k
+Ukraine	Donets'k
+Ukraine	Ivano-Frankivs'k
+Ukraine	Kharkiv
+Ukraine	Kherson
+Ukraine	Khmel'nyts'kyy
+Ukraine	Kiev
+Ukraine	Kiev City
+Ukraine	Kirovohrad
+Ukraine	Kyiv
+Ukraine	Kyiv City
+Ukraine	Luhans'k
+Ukraine	L'viv
+Ukraine	Mykolayiv
+Ukraine	Odessa
+Ukraine	Poltava
+Ukraine	Rivne
+Ukraine	Sumy
+Ukraine	Ternopil'
+Ukraine	Transcarpathia
+Ukraine	Vinnytsya
+Ukraine	Volyn
+Ukraine	Zaporizhzhya
+Ukraine	Zhytomyr
+United Arab Emirates	Abu Dhabi
+United Arab Emirates	Dubai
+United Arab Emirates	Sharjah
+United Kingdom	East Anglia
+United Kingdom	East Midlands
+United Kingdom	East of England
+United Kingdom	Greater London
+United Kingdom	London
+United Kingdom	North East
+United Kingdom	Northern Ireland
+United Kingdom	North West
+United Kingdom	Scotland
+United Kingdom	South East
+United Kingdom	South West
+United Kingdom	Wales
+United Kingdom	West Midlands
+United Kingdom	Yorkshire and the Humber
+Uruguay	Artigas
+Uruguay	Canelones
+Uruguay	Cerro Largo
+Uruguay	Colonia
+Uruguay	Durazno
+Uruguay	Maldonado
+Uruguay	Montevideo
+Uruguay	Paysandú
+Uruguay	Rivera
+Uruguay	Rocha
+Uruguay	Salto
+Uruguay	San José
+Uruguay	Soriano
+Uruguay	Tacuarembó
+Uzbekistan	Tashkent
+Uzbekistan	Tashkent City
+Venezuela	Anzoátegui
+Venezuela	Apure
+Venezuela	Aragua
+Venezuela	Barinas
+Venezuela	Bolívar
+Venezuela	Carabobo
+Venezuela	Distrito Capital
+Venezuela	Guárico
+Venezuela	Lara
+Venezuela	Mérida
+Venezuela	Miranda
+Venezuela	Monagas
+Venezuela	Nueva Esparta
+Venezuela	Portuguesa
+Venezuela	Sucre
+Venezuela	Táchira
+Venezuela	Vargas
+Venezuela	Zulia
+Vietnam	An Giang
+Vietnam	Bắc Giang
+Vietnam	Bắc Kạn
+Vietnam	Bạc Liêu
+Vietnam	Bắc Ninh
+Vietnam	Bà Rịa - Vũng Tàu
+Vietnam	Bến Tre
+Vietnam	Bình Định
+Vietnam	Bình Dương
+Vietnam	Bình Phước
+Vietnam	Bình Thuận
+Vietnam	Cà Mau
+Vietnam	Cần Thơ
+Vietnam	Đắk Lắk
+Vietnam	Đắk Nông
+Vietnam	Đà Nẵng
+Vietnam	Điện Biên
+Vietnam	Đồng Nai
+Vietnam	Đồng Tháp
+Vietnam	Gia Lai
+Vietnam	Hà Giang
+Vietnam	Hải Dương
+Vietnam	Hải Phòng
+Vietnam	Hà Nam
+Vietnam	Hà Nội
+Vietnam	Hà Tĩnh
+Vietnam	Hoà Bình
+Vietnam	Hưng Yên
+Vietnam	Khánh Hòa
+Vietnam	Kiên Giang
+Vietnam	Kon Tum
+Vietnam	Lai Châu
+Vietnam	Lâm Đồng
+Vietnam	Lạng Sơn
+Vietnam	Lào Cai
+Vietnam	Long An
+Vietnam	Nam Định
+Vietnam	Nghệ An
+Vietnam	Ninh Bình
+Vietnam	Phú Thọ
+Vietnam	Phú Yên
+Vietnam	Quảng Bình
+Vietnam	Quảng Nam
+Vietnam	Quảng Ngãi
+Vietnam	Quảng Ninh
+Vietnam	Quảng Trị
+Vietnam	Sóc Trăng
+Vietnam	Sơn La
+Vietnam	Tây Ninh
+Vietnam	Thái Bình
+Vietnam	Thái Nguyên
+Vietnam	Thanh Hóa
+Vietnam	Thành phố Hồ Chí Minh
+Vietnam	Thừa Thiên Huế
+Vietnam	Tiền Giang
+Vietnam	Tuyên Quang
+Vietnam	Vĩnh Phúc
+Vietnam	Yên Bái
+Yemen	Aden
+Yemen	Sana'a
