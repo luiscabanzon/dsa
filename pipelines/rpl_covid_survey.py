@@ -16,11 +16,13 @@ import pandas as pd
 # Renders the file path for the report to download
 def get_file_path(indicator, country, date):
     date_no_dash = date.replace('-', '')
-    return os.path.join(RAW_DATA_FOLDER_PATH, f'covid_survey__{indicator}__{country}__{date_no_dash}__{date_no_dash}.txt')
+    return os.path.join(RAW_DATA_FOLDER_PATH,
+                        f'covid_survey__{indicator}__{country}__{date_no_dash}__{date_no_dash}.txt')
+
 
 # Renders the table name for each different indicator
-def get_table_name(indicator, test_prefix):
-    return f'{test_prefix}{COVID_SURVEY_TABLE_NAME}_{indicator}'
+def get_rpl_covid_survey_table_name(indicator, test_prefix):
+    return f'{test_prefix}rpl_covid_survey_{indicator}'
 
 
 # ##############
@@ -36,7 +38,7 @@ class CreateTable(luigi.Task):
 
     def run(self):
         indicator_code = get_indicator_code(self.indicator)
-        percent = 'pct' if self.indicator == 'covid' else 'percent'
+        percent = get_pct_prefix(self.indicator)
         table_schema = (
             (f'{percent}_{indicator_code}', 'float'),
             (f'{indicator_code}_se', 'float'),
@@ -48,10 +50,10 @@ class CreateTable(luigi.Task):
             ('gid_0', 'text'),
             ('survey_date', 'NUMERIC'),
         )
-        create_table(get_table_name(self.indicator, self.test_prefix), table_schema)
+        create_table(get_rpl_covid_survey_table_name(self.indicator, self.test_prefix), table_schema)
 
     def output(self):
-        return TableExists(get_table_name(self.indicator, self.test_prefix))
+        return TableExists(get_rpl_covid_survey_table_name(self.indicator, self.test_prefix))
 
 
 class DownloadAPIReport(luigi.Task):
@@ -80,7 +82,7 @@ class DownloadAPIReport(luigi.Task):
     def output(self):
         file_path = get_file_path(self.indicator, self.country, self.date)
         return luigi.LocalTarget(file_path)
-        
+
 
 class LoadReportIntoDB(luigi.Task):
     """
@@ -92,7 +94,7 @@ class LoadReportIntoDB(luigi.Task):
     date = luigi.Parameter()
 
     def get_sql_filter(self):
-        return f"country='{self.country}' AND survey_date = {self.date.replace('-','')}"
+        return f"country='{self.country}' AND survey_date = {self.date.replace('-', '')}"
 
     def requires(self):
         yield DownloadAPIReport(indicator=self.indicator, country=self.country, date=self.date)
@@ -101,10 +103,11 @@ class LoadReportIntoDB(luigi.Task):
     def run(self):
         file_path = get_file_path(self.indicator, self.country, self.date)
         indicator_code = get_indicator_code(self.indicator)
+        percent = get_pct_prefix(self.indicator)
         table_schema = (
-            (f'percent_{indicator_code}', 'float'),
+            (f'{percent}_{indicator_code}', 'float'),
             (f'{indicator_code}_se', 'float'),
-            (f'percent_{indicator_code}_unw', 'float'),
+            (f'{percent}_{indicator_code}_unw', 'float'),
             (f'{indicator_code}_se_unw', 'float'),
             ('sample_size', 'NUMERIC'),
             ('country', 'text'),
@@ -114,14 +117,17 @@ class LoadReportIntoDB(luigi.Task):
         )
         load_file_in_table(
             file_path,
-            get_table_name(self.indicator, self.test_prefix),
+            get_rpl_covid_survey_table_name(self.indicator, self.test_prefix),
             table_schema=table_schema,
             overwrite_filter=self.get_sql_filter(),
             skip_header=True,
         )
 
     def output(self):
-        return DataExists(table_name=get_table_name(self.indicator, self.test_prefix), where_clause=self.get_sql_filter())
+        return DataExists(
+            table_name=get_rpl_covid_survey_table_name(self.indicator, self.test_prefix),
+            where_clause=self.get_sql_filter()
+        )
 
 
 class MasterTask(luigi.WrapperTask):
@@ -132,10 +138,14 @@ class MasterTask(luigi.WrapperTask):
     date = luigi.Parameter()
 
     def requires(self):
-        for indicator in ['mask', 'covid']:
-            for country in ['Germany', 'Japan']:
-                yield LoadReportIntoDB(indicator=indicator, country=country, date=self.date, test_prefix=self.test_prefix)
+        for indicator in INDICATORS:
+            for country in COUNTRIES:
+                yield LoadReportIntoDB(indicator=indicator, country=country, date=self.date,
+                                       test_prefix=self.test_prefix)
 
 
 if __name__ == '__main__':
      luigi.build([MasterTask()], workers=5, local_scheduler=True)
+
+# Scrip example to run the pipeline:
+# python -m luigi --module pipelines.rpl_covid_survey MasterTask --date 2021-07-01 --test-prefix test_0_ --local-scheduler

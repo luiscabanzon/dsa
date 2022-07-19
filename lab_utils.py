@@ -151,3 +151,15 @@ def get_indicator_code(indicator):
         'vaccine_acpt': 'vu',
     }
     return indicator_to_code.get(indicator, indicator)
+
+
+def get_pct_prefix(indicator):
+    pct_indicators = [
+        "covid",
+        "tested_positive_14d",
+        "covid_vaccine",
+    ]
+    if indicator in pct_indicators:
+        return "pct"
+    else:
+        return "percent"

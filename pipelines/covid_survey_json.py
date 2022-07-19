@@ -11,15 +11,8 @@ from jinja2 import Template
 # ###################
 
 # Renders the table name for each different indicator
-def get_table_name(test_prefix):
+def get_covid_surve_json_table_name(test_prefix):
     return f'{test_prefix}covid_survey_json'
-
-INDICATORS = (
-    'covid',
-    'mask',
-    'tested_positive_14d',
-    'anosmia',
-)
 
 
 # ##############
@@ -43,10 +36,10 @@ class CreateTable(luigi.Task):
             ('gid_0', 'text'),
             ('survey_date', 'NUMERIC'),
         )
-        create_table(get_table_name(self.test_prefix), table_schema)
+        create_table(get_covid_surve_json_table_name(self.test_prefix), table_schema)
 
     def output(self):
-        return TableExists(get_table_name(self.test_prefix))
+        return TableExists(get_covid_surve_json_table_name(self.test_prefix))
 
 
 class LoadTable(luigi.Task):
@@ -78,18 +71,18 @@ class LoadTable(luigi.Task):
         WITH_STATEMENT = ',\n'.join(['{i} AS (SELECT * FROM rpl_covid_survey_{i} WHERE survey_date={data_date})'.format(i=i, data_date=data_date) for i in INDICATORS])
 
         # String manipulation to concatenate different indicators withing a JSON-formatted string
-        percent_json = ' || '.join([""" '"{i}": ' || COALESCE(CAST({percent}_{code} AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i), percent = 'pct' if i == 'covid' else 'percent') for i in INDICATORS])
-        json_se = ' || '.join([""" '"{i}": ' || COALESCE(CAST({code}_se AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
-        percent_json_unw = ' || '.join([""" '"{i}": ' || COALESCE(CAST({percent}_{code}_unw AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i), percent = 'pct' if i == 'covid' else 'percent') for i in INDICATORS])
-        json_se_unw = ' || '.join([""" '"{i}": ' || COALESCE(CAST({code}_se_unw AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
-        json_sample_size = ' || '.join([""" '"{i}": ' || COALESCE(CAST({i}.sample_size AS TEXT), 'null') """.format(i=i) for i in INDICATORS])
+        percent_json = " || ',' || ".join([""" '"{i}": ' || COALESCE(CAST({percent}_{code} AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i), percent = get_pct_prefix(i)) for i in INDICATORS])
+        json_se = " || ',' || ".join([""" '"{i}": ' || COALESCE(CAST({code}_se AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
+        percent_json_unw = " || ',' || ".join([""" '"{i}": ' || COALESCE(CAST({percent}_{code}_unw AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i), percent=get_pct_prefix(i)) for i in INDICATORS])
+        json_se_unw = " || ',' || ".join([""" '"{i}": ' || COALESCE(CAST({code}_se_unw AS TEXT), 'null') """.format(i=i, code=get_indicator_code(i)) for i in INDICATORS])
+        json_sample_size = " || ',' || ".join([""" '"{i}": ' || COALESCE(CAST({i}.sample_size AS TEXT), 'null') """.format(i=i) for i in INDICATORS])
 
         country = 'COALESCE(%s)' % ', '.join([f'{i}.country' for i in INDICATORS])
         iso_code = 'COALESCE(%s)' % ', '.join([f'{i}.iso_code' for i in INDICATORS])
         gid_0 = 'COALESCE(%s)' % ', '.join([f'{i}.gid_0' for i in INDICATORS])
 
         # Delete data from the data we are inserting into (overwrite)
-        run_query(f"DELETE FROM {get_table_name(self.test_prefix)} WHERE {self.get_sql_filter()}")
+        run_query(f"DELETE FROM {get_covid_surve_json_table_name(self.test_prefix)} WHERE {self.get_sql_filter()}")
         # Insert data
         query = Template("""
             WITH {{WITH_STATEMENT}}
@@ -111,7 +104,7 @@ class LoadTable(luigi.Task):
                 {{data_date}} AS survey_date
             FROM {{JOIN_STATEMENT}}
         """).render(
-            table_name=get_table_name(self.test_prefix),
+            table_name=get_covid_surve_json_table_name(self.test_prefix),
             data_date=data_date,
             WITH_STATEMENT=WITH_STATEMENT,
             JOIN_STATEMENT=JOIN_STATEMENT,
@@ -125,11 +118,14 @@ class LoadTable(luigi.Task):
             gid_0=gid_0,
         )
         print(query)
-        run_query(query)
+        run_query(query, True)
 
     def output(self):
-        return DataExists(table_name=get_table_name(self.test_prefix), where_clause=self.get_sql_filter())
+        return DataExists(table_name=get_covid_surve_json_table_name(self.test_prefix), where_clause=self.get_sql_filter())
 
 
 if __name__ == '__main__':
      luigi.build([LoadTable()], workers=5, local_scheduler=True)
+
+# Scrip example to run the pipeline:
+# python -m luigi --module pipelines.covid_survey_json LoadTable --date 2021-07-01 --test-prefix test_0_ --local-scheduler

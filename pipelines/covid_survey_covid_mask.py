@@ -12,7 +12,7 @@ import json
 # ###################
 
 # Renders the table name for each different indicator
-def get_table_name(test_prefix):
+def get_covid_survey_covid_mask_table_name(test_prefix):
     return f'{test_prefix}covid_survey_covid_mask'
 
 
@@ -43,10 +43,10 @@ class CreateTable(luigi.Task):
             ('gid_0', 'text'),
             ('survey_date', 'NUMERIC'),
         )
-        create_table(get_table_name(self.test_prefix), table_schema)
+        create_table(get_covid_survey_covid_mask_table_name(self.test_prefix), table_schema)
 
     def output(self):
-        return TableExists(get_table_name(self.test_prefix))
+        return TableExists(get_covid_survey_covid_mask_table_name(self.test_prefix))
 
 
 class LoadTable(luigi.Task):
@@ -64,10 +64,10 @@ class LoadTable(luigi.Task):
 
     def run(self):
         # Detele data from the data we are inserting into (overwrite)
-        run_query(f"DELETE FROM {get_table_name(self.test_prefix)} WHERE {self.get_sql_filter()}")
+        run_query(f"DELETE FROM {get_covid_survey_covid_mask_table_name(self.test_prefix)} WHERE {self.get_sql_filter()}")
         # Insert data
         run_query(f"""
-            INSERT INTO {get_table_name(self.test_prefix)}
+            INSERT INTO {get_covid_survey_covid_mask_table_name(self.test_prefix)}
             SELECT 
                 pct_covid,
                 covid_se,
@@ -92,8 +92,11 @@ class LoadTable(luigi.Task):
         """)
 
     def output(self):
-        return DataExists(table_name=get_table_name(self.test_prefix), where_clause=self.get_sql_filter())
+        return DataExists(table_name=get_covid_survey_covid_mask_table_name(self.test_prefix), where_clause=self.get_sql_filter())
 
 
 if __name__ == '__main__':
      luigi.build([LoadTable()], workers=5, local_scheduler=True)
+
+# Scrip example to run the pipeline:
+# python -m luigi --module pipelines.covid_survey_covid_mask LoadTable --date 2021-07-01 --test-prefix test_0_ --local-scheduler
