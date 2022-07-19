@@ -5,11 +5,28 @@
 ---
 To go through this lab you will need to install the following tools in your workstation.
 
-### 1.A PostgreSQL
-Download it from the [official website](https://www.postgresql.org/). It uncludes both the database (which we will use to store and process data) as well as *pgAdmin*, and an environment to query and manage Postgre databases.
-During installation keep note of 2 things we will need to connect to the database afterwards:
-- 1. Port: By default it should be 5432. If it's any other, keep note of it
-- 2. Superuser's (postgres) password: To keep it simple I set it to "postgres", but if you set any other... Don't forget it!
+### 1.A Set virtual environment using venv
+If you are running this in your local machine, it's highly recommendable to use a virtual environment
+to keep the version of your Python libraries under control (and avoid version conflicts).
+
+You can install virtualenv using pip
+> python3 -m pip install --user virtualenv
+
+Create a virtual environment from your terminal running
+> virtualenv {name_of_environment}
+
+Then, activate the virtual environment running:
+> -- Unix (Linux/Mac)
+> source bin/activate
+> -- Windows
+> venv\Scripts\activate
+
+Once you are inside the virtual environment, install dependencies:
+> pip3 install -r requirements.txt
+
+Sorted! Now let's begin by the Jupyter notebook. Run from the terminal:
+> jupyter notebook
+  
 
 ### 1.B Python 3 libraries
 We need the following libraries:

@@ -63,19 +63,9 @@ def load_file_in_table(
     print('-----------------------\nFile loading: STARTED\n-----------------------\n')
     insert_statement = f"INSERT INTO {table_name} ({', '.join([col[0] for col in table_schema])}) VALUES({', '.join(['?' for col in table_schema])})"
     print(insert_statement)
-    # with open(file_path, 'r', encoding=file_encoding) as f:
-    #     csv_file = csv.reader(f, delimiter=delimiter)
-    #     if skip_header:
-    #         csv_file = next(csv_file)
-        # cur.copy_from(f, table_name, sep=sep)
     df = pd.read_csv(file_path, sep=sep)
     df.to_sql(table_name, con=conn, if_exists='append', index=False)
-        # for file_row in csv_file:
-        #     print("FILE ROW: ", file_row)
-        #     print(type(file_row))
-        #     cur.execute(insert_statement, file_row)
     conn.close()
-
     print('-----------------------\nFile loading: FINISHED\n-----------------------\n')
 
 
